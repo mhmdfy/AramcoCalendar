@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Aramco Corporate Calendar',
+      title: 'Aramco Operational Calendar',
       home: Scaffold(
         appBar: _getGradientAppBar(),
         body: BodyPage(),
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
 
   AppBar _getGradientAppBar() {
     return AppBar(
-      title: Text('Aramco Corporate Calendar'),
+      title: Text('Aramco Operational Calendar'),
       flexibleSpace: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
