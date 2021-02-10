@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         appBar: _getGradientAppBar(),
         body: BodyPage(),
         persistentFooterButtons: [
-          Image(image: AssetImage('assets/images/calendar-legend.png'))
+          LegendFooter()
         ],
       ),
     );
@@ -55,4 +55,23 @@ class BodyPage extends StatelessWidget {
       return 'assets/images/calendar-tablet.png';
     }
   }
+}
+
+class LegendFooter extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return _getFooter(context);
+  }
+
+  Widget _getFooter(BuildContext context) {
+    var shortestSide = MediaQuery.of(context).size.shortestSide;
+    var useMobileLayout = shortestSide < 600;
+    if (useMobileLayout) {
+      return Image(image: AssetImage('assets/images/calendar-legend.png'));
+    } else {
+      return Container();
+    }
+    
+  }
+
 }
