@@ -13,13 +13,16 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: _getGradientAppBar(),
         body: BodyPage(),
+        persistentFooterButtons: [
+          Image(image: AssetImage('assets/images/calendar-legend.png'))
+        ],
       ),
     );
   }
 
   AppBar _getGradientAppBar() {
     return AppBar(
-      title: Text('Aramco Operational Calendar'),
+      title: Text('Operational Calendar'),
       flexibleSpace: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
