@@ -69,7 +69,9 @@ class LegendFooter extends StatelessWidget {
     if (useMobileLayout) {
       return Image(image: AssetImage('assets/images/calendar-legend.png'));
     } else {
-      return Container();
+      return Container(
+        height: 0,
+      );
     }
     
   }
